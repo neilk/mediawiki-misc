@@ -1,0 +1,2 @@
+#!/bin/sh
+php -r 'include "includes/libs/JSMin.php"; echo JSMin::minify( file_get_contents( $argv[1] ) );' $*

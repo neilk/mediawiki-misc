@@ -1,0 +1,13 @@
+#!/opt/local/bin/perl -w
+use strict;
+
+my $trunk = 'svn+ssh://neilk@svn.wikimedia.org/svnroot/mediawiki/trunk';
+my $core = "$trunk/phase3";
+my $extensions = "$trunk/extensions";
+
+chdir "~/Sites/production" and die $!;
+
+my $change = $ARGV[0];
+chomp $change;
+system( "svn merge -c $change $core ." ) and die $!;
+system( "svn merge -c $change $extensions extensions" ) and die $!;

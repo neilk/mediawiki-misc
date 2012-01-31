@@ -1,0 +1,2 @@
+#!/bin/sh
+php -r 'include "includes/libs/JavaScriptMinifier.php"; echo JavaScriptMinifier::minify( file_get_contents( $argv[1] ) );' $*

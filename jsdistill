@@ -1,0 +1,2 @@
+#!/bin/sh
+php -r 'include "includes/libs/JavaScriptDistiller.php"; echo JavaScriptDistiller::stripWhiteSpace( file_get_contents( $argv[1] ) );' $*

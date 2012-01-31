@@ -1,0 +1,14 @@
+Some utilities for use with MediaWiki. Many of them are rather special-purpose for my 
+needs; these are unlikely to have any use for anyone else.
+
+* corify-msgs.pl, merge-msgs.pl - part of a complex process if you are moving messages from an extension to core
+
+* getMessagesUsed.pl - scan a PHP source file for what messages are used.
+
+* jsdistill, jsmin, jsminify - executables for minifying things, if you are debugging minifications
+
+* makeRandomImages - uses the RandomImage libraries in the PHP unit tests to generate images with random
+triangles. I use in a cron script, to have an endless supply of new images to upload.
+
+* mft - utility for merging a number of changes from trunk
+

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd $HOME/Pictures/random; 
+for format in $*; do
+	/usr/bin/find . -name "*.$format" -mtime +6m -exec /bin/rm {} \; ; 
+	$HOME/bin/alarm 180 /opt/local/bin/php $HOME/Sites/trunk/tests/phpunit/includes/api/generateRandomImages.php --maxWidth=5000 --maxHeight=5000 --shapesToDraw=50 --format=$format ;
+done;
